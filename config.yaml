@@ -1,4 +1,5 @@
 baseURL: "https://masayoshi64.github.io/"
+publishDir: "docs"
 title: ExampleSite
 paginate: 5
 theme: PaperMod
