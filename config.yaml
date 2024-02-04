@@ -85,10 +85,12 @@ params:
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: Posts
+      - name: 投稿
         url: posts
-      - name: Tags
-        url: tags
+      - name: プロフィール
+        url: fixed/profile
+      - name: 研究
+        url: fixed/works
 
   socialIcons:
     - name: x
