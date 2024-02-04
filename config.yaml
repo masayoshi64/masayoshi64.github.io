@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://masayoshi64.github.io/"
 title: ExampleSite
 paginate: 5
 theme: PaperMod
@@ -77,8 +77,8 @@ params:
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
+    title: Shokichi Takakura
+    subtitle: "今日も一日"
     imageUrl: "<img location>"
     imageWidth: 120
     imageHeight: 120
@@ -92,10 +92,8 @@ params:
   socialIcons:
     - name: x
       url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/masayoshi64"
 
   cover:
     hidden: true # hide everywhere but not in structured data
