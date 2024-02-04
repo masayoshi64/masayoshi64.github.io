@@ -80,9 +80,9 @@ params:
     enabled: true # needs to be explicitly set
     title: Shokichi Takakura
     subtitle: "今日も一日"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
+    imageUrl: "profile.jpg"
+    imageWidth: 240
+    imageHeight: 240
     imageTitle: my image
     buttons:
       - name: 投稿
