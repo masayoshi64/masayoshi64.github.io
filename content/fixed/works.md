@@ -12,6 +12,6 @@ draft = false
 ## Presentations
 - **Shokichi Takakura**, and Taiji Suzuki: Grokking in Linear Diagonal Neural Networks. The 26th Information-Based Induction Science Workshop, Hukuoka, Japan, Oct. 2023.
 - **Shokichi Takakura**, and Taiji Suzuki: Approximation and Estimation Ability of Transformers for Sequence-to-Sequence Functions with Infinite Dimensional Input. The 26th Information-Based Induction Science Workshop, Hukuoka, Japan, Oct. 2023.
-- **Shokichi Takakura**, and Taiji Suzuki: Approximation and Estimation Ability of Transformers for Sequence-to-Sequence Functions with Infinite Dimensional Input. Japanese Joint Statistical Meeting, Kyoto, Japan, Sep. 2023.
+- **Shokichi Takakura**, and Taiji Suzuki: 無限次元入力sequence-to-sequence関数に対するトランスフォーマーの近似及び推定能力. Japanese Joint Statistical Meeting, Kyoto, Japan, Sep. 2023.
 - **Shokichi Takakura**, and Taiji Suzuki: Approximation and Estimation Ability of Transformers for Sequence-to-Sequence Functions with Infinite Dimensional Input. The 40th International Conference on Machine Learning (ICML2023), Hawaii, USA, Jul. 2023.
 - **Shokichi Takakura**, and Kazuhiro Sato: 方策勾配法を用いた線形2次レギュレータの制約付き出力フィードバック制御. 第66回システム制御情報学会研究発表講演会 (SCI’22), Kyoto, Japan, May 2022.

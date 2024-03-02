@@ -32,6 +32,10 @@ languages:
           name: 研究
           url: fixed/works
           weight: 15
+        - identifier: links
+          name: リンク
+          url: fixed/links
+          weight: 15
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
