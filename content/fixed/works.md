@@ -5,7 +5,7 @@ draft = false
 +++
 
 ## Preprints
-- **Shokichi Takakura**, and Taiji Suzuki: [Mean-field Analysis on Two-layer Neural Networks from a Kernel Perspective](https://arxiv.org/abs/2403.14917) arXiv preprint arXiv:2403.14917, 2024.
+- **Shokichi Takakura**, and Taiji Suzuki: [Mean-field Analysis on Two-layer Neural Networks from a Kernel Perspective.](https://arxiv.org/abs/2403.14917) arXiv preprint arXiv:2403.14917, 2024.
 
 ## Journal papers (Refereed)
 - **Shokichi Takakura**, and Kazuhiro Sato: [Structured Output Feedback Control for Linear Quadratic Regulator Using Policy Gradient Method.](https://ieeexplore.ieee.org/document/10091214) IEEE Transactions on Automatic Control, vol. 69, no. 1, pp. 363-370, 2022.
