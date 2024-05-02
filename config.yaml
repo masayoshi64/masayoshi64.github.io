@@ -32,9 +32,9 @@ languages:
           name: 研究
           url: fixed/works
           weight: 15
-        - identifier: links
-          name: リンク
-          url: fixed/links
+        - identifier: others
+          name: その他
+          url: fixed/others
           weight: 20
 
 params:
@@ -97,6 +97,8 @@ params:
         url: fixed/works
 
   socialIcons:
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?hl=en&user=a5sL-8cAAAAJ"
     - name: x
       url: "https://twitter.com/masayoshi361/"
     - name: github
