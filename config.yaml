@@ -1,5 +1,5 @@
 baseURL: "https://masayoshi64.github.io/"
-publishDir: "docs"
+publishDir: "public"
 title: Shokichi Takakura
 paginate: 5
 theme: PaperMod
