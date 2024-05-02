@@ -83,7 +83,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Shokichi Takakura
-    subtitle: "今日も一日"
+    subtitle: "機械学習の研究をしています"
     imageUrl: "profile.jpg"
     imageWidth: 240
     imageHeight: 240
@@ -98,7 +98,7 @@ params:
 
   socialIcons:
     - name: x
-      url: "https://x.com/"
+      url: "https://twitter.com/masayoshi361/"
     - name: github
       url: "https://github.com/masayoshi64"
 
