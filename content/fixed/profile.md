@@ -8,7 +8,7 @@ draft = false
 
 ## Affiliation
 
-???
+LINEヤフー株式会社 機械学習エンジニア
 
 ## Education
 |                   |                                                           |
