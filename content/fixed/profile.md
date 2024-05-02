@@ -8,7 +8,6 @@ draft = false
 
 ## Affiliation
 
-テスト
 LINEヤフー株式会社 機械学習エンジニア
 
 ## Research Interests
