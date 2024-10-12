@@ -99,8 +99,6 @@ params:
   socialIcons:
     - name: googlescholar
       url: "https://scholar.google.com/citations?hl=en&user=a5sL-8cAAAAJ"
-    - name: x
-      url: "https://twitter.com/masayoshi361/"
     - name: github
       url: "https://github.com/masayoshi64"
 
