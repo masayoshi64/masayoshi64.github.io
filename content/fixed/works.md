@@ -5,7 +5,7 @@ draft = false
 +++
 
 ## Preprints
-
+- **Shokichi Takakura**, Seng Pei Liew, and Satoshi Hasegawa: [Accelerating Differentially Private Federated Learning via Adaptive Extrapolation.](https://arxiv.org/abs/2504.09850)
 ## Journal papers (Refereed)
 - **Shokichi Takakura**, and Kazuhiro Sato: [Structured Output Feedback Control for Linear Quadratic Regulator Using Policy Gradient Method.](https://ieeexplore.ieee.org/document/10091214) IEEE Transactions on Automatic Control, vol. 69, no. 1, pp. 363-370, 2022.
 ## International Conference papers (Refereed)
@@ -13,6 +13,7 @@ draft = false
 - **Shokichi Takakura**, and Taiji Suzuki: [Approximation and Estimation Ability of Transformers for Sequence-to-Sequence Functions with Infinite Dimensional Input.](https://proceedings.mlr.press/v202/takakura23a.html) Proceedings of the 40th International Conference on Machine Learning (ICML2023), PMLR 202:33416--33447, 2023.
 
 ## Presentations
+- **Shokichi Takakura**, Seng Pei Liew, and Satoshi Hasegawa: Accelerating Differentially Private Federated Learning via Adaptive Extrapolation. Will Synthetic Data Finally Solve the Data Access Problem? (ICLR 2025 workshop), Singapore, April. 2025.
 - **Shokichi Takakura**, and Taiji Suzuki: カーネルの観点による二層ニューラルネットワークの平均場解析. Japanese Joint Statistical Meeting, Tokyo, Japan, Sep. 2024.
 - **Shokichi Takakura**, and Taiji Suzuki: Mean-field Analysis on Two-layer Neural Networks from a Kernel Perspective. The 41th International Conference on Machine Learning (ICML2024), Vienna, Austria, Jul. 2024.
 - **Shokichi Takakura**, and Taiji Suzuki: Mean-field Analysis on Two-layer Neural Networks from a Kernel Perspective. Workshop on Functional Inference and Machine Intelligence, Bristol, UK, Mar. 2024.
