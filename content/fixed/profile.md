@@ -8,10 +8,10 @@ draft = false
 
 ## Affiliation
 
-LINEヤフー株式会社 機械学習エンジニア
+LINEヤフー株式会社 リサーチエンジニア
 
 ## Research Interests
-Machine Learning, Optimization
+Machine Learning, Optimization, Privacy Enhancing Technologies
 
 ## Education
 |                   |                                                           |
@@ -24,7 +24,7 @@ Machine Learning, Optimization
 
 |                   |                                         |
 | ----------------- | --------------------------------------- |
-| 2024.04 -         | LINEヤフー株式会社 機械学習エンジニア   |
+| 2024.04 -         | LINEヤフー株式会社 リサーチエンジニア   |
 | 2023.04 - 2024.03 | 東京大学 留学生チューター               |
 | 2023.01 - 2024.03 | 理研AIP リサーチアシスタント            |
 | 2022.08 - 2022.09 | NTT研究所 リサーチインターン            |
