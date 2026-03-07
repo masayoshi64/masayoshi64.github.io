@@ -5,6 +5,9 @@ draft = false
 +++
 
 ## Preprints
+- Tomoya Matsumoto\*, **Shokichi Takakura**\*, Shun Takagi, and Satoshi Hasegawa: [DPSQL+: A Differentially Private SQL Library with a Minimum Frequency Rule.](https://arxiv.org/abs/2602.22699) (\*Equal contribution)
+- Akifumi Wachi, Hirota Kinoshita, **Shokichi Takakura**, Rei Higuchi, Taiji Suzuki: [A Relative-Budget Theory for Reinforcement Learning with Verifiable Rewards in Large Language Model Reasoning.](https://arxiv.org/abs/2602.01523)
+- **Shokichi Takakura**, Akifumi Wachi, Rei Higuchi, Kohei Miyaguchi, Taiji Suzuki: [Inference-Aware Meta-Alignment of LLMs via Non-Linear GRPO](https://arxiv.org/abs/2602.01603)
 - **Shokichi Takakura**, Seng Pei Liew, and Satoshi Hasegawa: [Accelerating Differentially Private Federated Learning via Adaptive Extrapolation.](https://arxiv.org/abs/2504.09850)
 ## Journal papers (Refereed)
 - **Shokichi Takakura**, and Kazuhiro Sato: [Structured Output Feedback Control for Linear Quadratic Regulator Using Policy Gradient Method.](https://ieeexplore.ieee.org/document/10091214) IEEE Transactions on Automatic Control, vol. 69, no. 1, pp. 363-370, 2022.
@@ -15,6 +18,7 @@ draft = false
 - **Shokichi Takakura**, and Taiji Suzuki: [Approximation and Estimation Ability of Transformers for Sequence-to-Sequence Functions with Infinite Dimensional Input.](https://proceedings.mlr.press/v202/takakura23a.html) Proceedings of the 40th International Conference on Machine Learning (ICML2023), PMLR 202:33416--33447, 2023.
 
 ## Presentations
+- **Shokichi Takakura**, Seng Pei Liew, and Satoshi Hasegawa: Optimal Variance and Covariance Estimation under Differential Privacy in the Add-Remove Model. 第18回データ工学と情報マネジメントに関するフォーラム (DEIM2026), Hyogo, Japan, March. 2026.
 - **Shokichi Takakura**, Seng Pei Liew, and Satoshi Hasegawa: FedDuA: Doubly Adaptive Federated Learning. The 28th Information-Based Induction Science Workshop, Okinawa, Japan, Nov. 2025.
 - **Shokichi Takakura**, Seng Pei Liew, and Satoshi Hasegawa: Accelerating Differentially Private Federated Learning via Adaptive Extrapolation. Will Synthetic Data Finally Solve the Data Access Problem? (ICLR 2025 workshop), Singapore, April. 2025.
 - **Shokichi Takakura**, and Taiji Suzuki: カーネルの観点による二層ニューラルネットワークの平均場解析. Japanese Joint Statistical Meeting, Tokyo, Japan, Sep. 2024.
