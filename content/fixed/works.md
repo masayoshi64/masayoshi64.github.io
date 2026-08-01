@@ -27,7 +27,7 @@ draft = false
 - 優秀論文賞, 第18回データ工学と情報マネジメントに関するフォーラム (DEIM2026).
 
 ## Talks & Lectures
-- プライバシー保護の理論と実践. 工学院大学「情報学先端技術」, Jul. 2026. ([slide]((https://speakerdeck.com/lycorptech_jp/20260706a)))
+- プライバシー保護の理論と実践. 工学院大学「情報学先端技術」, Jul. 2026. [slide](https://speakerdeck.com/lycorptech_jp/20260706a)
 
 ## Presentations
 - **Shokichi Takakura**, Seng Pei Liew, and Satoshi Hasegawa: Optimal Variance and Covariance Estimation under Differential Privacy in the Add-Remove Model. 第18回データ工学と情報マネジメントに関するフォーラム (DEIM2026), Hyogo, Japan, March. 2026.
