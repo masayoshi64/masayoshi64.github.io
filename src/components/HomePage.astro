@@ -254,10 +254,20 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
       margin-top: 4px;
     }
 
+    /* Affiliation goes under the name, next to the photo */
+    .intro {
+      display: flex;
+      flex-direction: column;
+    }
+
     .eyebrow {
-      margin-bottom: 10px;
+      order: 1;
+      margin: 10px 0 0;
       font-size: 11.5px;
       letter-spacing: 0.03em;
+      line-height: 1.6;
+      word-break: keep-all;
+      text-wrap: balance;
     }
 
     h1 {
