@@ -19,10 +19,12 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
     <div class="photo">
       <img src="/profile.jpg" alt={profile.name} width="220" height="220" />
     </div>
-    <div>
+    <div class="intro">
       <span class="eyebrow">{profile.affiliation[lang]}</span>
       <h1>{profile.name}</h1>
       <p class="subname">{profile.nameJa}</p>
+    </div>
+    <div class="body">
       <p class="lead">{profile.lead[lang]}</p>
       <ul class="tags">
         {profile.interests.map((i) => <li>{i}</li>)}
@@ -79,16 +81,21 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
   .hero {
     display: grid;
     grid-template-columns: 1fr 200px;
-    grid-template-areas: "text photo";
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "intro photo" "body photo";
     align-items: start;
-    gap: 56px;
+    column-gap: 56px;
     padding: 72px 0 56px;
     margin-bottom: 48px;
     border-bottom: 2px solid var(--rule);
   }
 
-  .hero > div:not(.photo) {
-    grid-area: text;
+  .intro {
+    grid-area: intro;
+  }
+
+  .body {
+    grid-area: body;
   }
 
   .photo {
@@ -210,9 +217,10 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
 
   @media (max-width: 720px) {
     .hero {
-      grid-template-columns: 1fr;
-      grid-template-areas: "photo" "text";
-      gap: 24px;
+      grid-template-columns: 1fr 96px;
+      grid-template-rows: auto;
+      grid-template-areas: "intro photo" "body body";
+      column-gap: 16px;
       padding: 32px 0 40px;
       margin-bottom: 36px;
     }
@@ -241,9 +249,23 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
     }
 
     .photo {
-      width: 140px;
-      height: 175px;
-      margin-top: 0;
+      width: 96px;
+      height: 120px;
+      margin-top: 4px;
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+      font-size: 11.5px;
+      letter-spacing: 0.03em;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    .lead {
+      margin-top: 20px;
     }
   }
 </style>
