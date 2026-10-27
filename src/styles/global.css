@@ -214,6 +214,21 @@ h2.section + .tags {
   border-top: 1px solid var(--rule);
 }
 
+@media (max-width: 720px) {
+  main {
+    padding: 0 20px 56px;
+  }
+
+  .page-head {
+    padding: 36px 0 16px;
+  }
+
+  h2.section {
+    margin-top: 36px;
+    font-size: 19px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;

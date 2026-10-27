@@ -104,8 +104,23 @@ const groups = PUB_TYPES.map(({ type, label }) => ({ type, label: label[lang], i
   }
 
   @media (max-width: 720px) {
+    /* One swipeable row instead of four wrapped rows. */
     .filters {
       position: static;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin: 0 -20px;
+      padding: 8px 20px;
+      scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filters button {
+      flex: none;
+      padding: 8px 14px;
     }
   }
 </style>
