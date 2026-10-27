@@ -45,7 +45,12 @@ const timelines = [
 
 <style>
   .about {
-    font-size: 16.5px;
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  h2.section + .timeline {
+    margin-top: 20px;
   }
 
   .timeline {
@@ -59,8 +64,8 @@ const timelines = [
     top: 8px;
     bottom: 8px;
     left: 5px;
-    width: 2px;
-    background: var(--border);
+    width: 1px;
+    background: var(--rule);
   }
 
   .timeline li {
@@ -77,27 +82,28 @@ const timelines = [
     position: absolute;
     top: 7px;
     left: -22px;
-    width: 12px;
-    height: 12px;
-    background: var(--surface);
-    border: 3px solid var(--accent);
-    border-radius: 50%;
+    left: -21px;
+    width: 9px;
+    height: 9px;
+    background: var(--bg);
+    border: 1.5px solid var(--rule);
   }
 
   .timeline li.current::before {
     background: var(--accent);
-    box-shadow: 0 0 0 4px var(--accent-soft);
+    border-color: var(--accent);
   }
 
   .period {
-    font-size: 13px;
-    font-weight: 600;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    font-weight: 500;
     font-variant-numeric: tabular-nums;
     color: var(--accent);
   }
 
   .org {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--heading);
   }
 

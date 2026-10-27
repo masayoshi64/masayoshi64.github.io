@@ -33,7 +33,7 @@ const links = [
       }
     </div>
     {pub.note && <div class="note">{pub.note}</div>}
-    {pub.award && <div class="award"><span class="chip award">🏆 {pub.award}</span></div>}
+    {pub.award && <div class="award"><span class="chip award">★ {pub.award}</span></div>}
     {pub.equal && <div class="small">{UI[lang].equal}</div>}
     {
       links.length > 0 && (
@@ -52,18 +52,10 @@ const links = [
 <style>
   .pub {
     display: grid;
-    grid-template-columns: 112px 1fr;
+    grid-template-columns: 130px 1fr;
     gap: 16px;
-    padding: 16px 18px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    transition: box-shadow 0.15s, border-color 0.15s;
-  }
-
-  .pub:hover {
-    box-shadow: var(--shadow);
-    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
   }
 
   .meta {
@@ -74,19 +66,25 @@ const links = [
   }
 
   .year {
+    font-family: var(--mono);
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     font-variant-numeric: tabular-nums;
     color: var(--muted);
   }
 
   .title {
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.5;
     color: var(--heading);
   }
 
   .title a {
+    color: var(--heading);
+    transition: color 0.15s;
+  }
+
+  .title a:hover {
     color: var(--accent);
   }
 
@@ -126,12 +124,12 @@ const links = [
   }
 
   .links a {
-    padding: 3px 10px;
+    padding: 2px 10px;
+    font-family: var(--mono);
     font-size: 12px;
-    font-weight: 600;
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    font-weight: 500;
+    color: var(--heading);
+    border: 1px solid var(--rule);
     transition: color 0.15s, border-color 0.15s;
   }
 

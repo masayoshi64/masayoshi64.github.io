@@ -36,7 +36,7 @@ const ogImage = new URL("/profile.jpg", Astro.site);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=LINE+Seed+JP:wght@400;700;800&display=swap"
     />
     <script is:inline>
       (() => {
@@ -123,16 +123,14 @@ const ogImage = new URL("/profile.jpg", Astro.site);
     top: 0;
     z-index: 10;
     background: var(--header-bg);
-    backdrop-filter: saturate(180%) blur(14px);
-    -webkit-backdrop-filter: saturate(180%) blur(14px);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 2px solid var(--rule);
   }
 
   .nav {
     display: flex;
     align-items: center;
     gap: 24px;
-    max-width: 1080px;
+    max-width: 980px;
     height: var(--header-height);
     margin: 0 auto;
     padding: 0 24px;
@@ -141,8 +139,8 @@ const ogImage = new URL("/profile.jpg", Astro.site);
   .logo {
     margin-right: auto;
     font-size: 18px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
     white-space: nowrap;
     color: var(--heading);
   }
@@ -179,15 +177,14 @@ const ogImage = new URL("/profile.jpg", Astro.site);
   .lang {
     display: flex;
     overflow: hidden;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 999px;
+    border: 1px solid var(--rule);
   }
 
   .lang a {
     padding: 4px 10px;
+    font-family: var(--mono);
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--muted);
   }
 
@@ -196,8 +193,8 @@ const ogImage = new URL("/profile.jpg", Astro.site);
   }
 
   .lang a.on {
-    color: #fff;
-    background: var(--accent);
+    color: var(--bg);
+    background: var(--heading);
   }
 
   .theme-toggle {
@@ -205,10 +202,9 @@ const ogImage = new URL("/profile.jpg", Astro.site);
     place-items: center;
     width: 32px;
     height: 32px;
-    color: var(--muted);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 50%;
+    color: var(--heading);
+    background: none;
+    border: 1px solid var(--rule);
     cursor: pointer;
   }
 
@@ -235,20 +231,21 @@ const ogImage = new URL("/profile.jpg", Astro.site);
     font-weight: 500;
     white-space: nowrap;
     color: var(--muted);
-    border-radius: 999px;
+    border-bottom: 2px solid transparent;
   }
 
   .mobile-menu a.active {
-    color: var(--accent);
-    background: var(--accent-soft);
+    color: var(--heading);
+    border-color: var(--accent);
   }
 
   .footer {
     padding: 28px 24px;
-    font-size: 13px;
+    font-family: var(--mono);
+    font-size: 12.5px;
     text-align: center;
     color: var(--muted);
-    border-top: 1px solid var(--border);
+    border-top: 2px solid var(--rule);
   }
 
   @media (max-width: 720px) {

@@ -57,7 +57,7 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
       profile.highlights.map((h) => (
         <li class="card">
           <span class:list={["chip", { award: h.award }]}>
-            {h.award && "🏆 "}
+            {h.award && "★ "}
             {h.tag}
           </span>
           <p class="prose-link" set:html={inlineLinks(h.text[lang])} />
@@ -78,70 +78,64 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
 <style>
   .hero {
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 48px;
-    padding: 64px 0 48px;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas: "text photo";
+    align-items: start;
+    gap: 56px;
+    padding: 72px 0 56px;
+    margin-bottom: 48px;
+    border-bottom: 2px solid var(--rule);
+  }
+
+  .hero > div:not(.photo) {
+    grid-area: text;
   }
 
   .photo {
-    position: relative;
-    width: 220px;
-    height: 220px;
-  }
-
-  .photo::before {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    background: conic-gradient(from 180deg, var(--accent), var(--accent-2), var(--accent));
-    opacity: 0.85;
+    grid-area: photo;
+    width: 200px;
+    height: 250px;
+    margin-top: 28px;
   }
 
   .photo img {
-    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: 5px solid var(--bg);
-    border-radius: 50%;
+    filter: grayscale(1) contrast(1.05);
   }
 
   .eyebrow {
     display: inline-block;
     margin-bottom: 14px;
-    padding: 4px 12px;
-    font-size: 13px;
-    font-weight: 600;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
     color: var(--accent);
-    background: var(--accent-soft);
-    border-radius: 999px;
   }
 
   h1 {
-    font-size: clamp(34px, 6vw, 50px);
+    font-size: clamp(40px, 8vw, 64px);
     font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    background: linear-gradient(120deg, var(--heading) 30%, var(--accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    color: var(--heading);
   }
 
   .subname {
-    margin-top: 6px;
+    margin-top: 8px;
     color: var(--muted);
   }
 
   .lead {
-    margin-top: 16px;
-    font-size: 17px;
+    margin-top: 18px;
+    font-size: 19px;
+    line-height: 1.7;
   }
 
   .tags {
-    margin-top: 18px;
+    margin-top: 20px;
   }
 
   .actions {
@@ -149,7 +143,7 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    margin-top: 26px;
+    margin-top: 28px;
   }
 
   .btn {
@@ -158,25 +152,21 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
     gap: 6px;
     padding: 10px 18px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--heading);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
-  }
-
-  .btn:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent);
-    box-shadow: var(--shadow-hover);
+    border: 1.5px solid var(--rule);
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
   }
 
   .btn.primary {
+    color: var(--bg);
+    background: var(--heading);
+  }
+
+  .btn:hover {
     color: #fff;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    border-color: transparent;
+    background: var(--accent);
+    border-color: var(--accent);
   }
 
   .social {
@@ -190,60 +180,46 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
     place-items: center;
     width: 40px;
     height: 40px;
-    color: var(--muted);
-    border-radius: 10px;
-    transition: color 0.15s, background 0.15s;
+    color: var(--heading);
+    transition: color 0.15s;
   }
 
   .social a:hover {
     color: var(--accent);
-    background: var(--accent-soft);
   }
 
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 14px;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
   }
 
   .card {
     padding: 18px 20px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    transition: transform 0.15s, box-shadow 0.15s;
-  }
-
-  .card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
   }
 
   .card p {
     margin-top: 8px;
     font-size: 14px;
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
   @media (max-width: 720px) {
     .hero {
       grid-template-columns: 1fr;
-      justify-items: center;
+      grid-template-areas: "photo" "text";
       gap: 28px;
       padding-top: 40px;
-      text-align: center;
     }
 
     .photo {
-      width: 168px;
-      height: 168px;
-    }
-
-    .tags,
-    .actions {
-      justify-content: center;
+      width: 140px;
+      height: 175px;
+      margin-top: 0;
     }
   }
 </style>

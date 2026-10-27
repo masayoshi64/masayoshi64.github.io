@@ -73,7 +73,7 @@ const groups = PUB_TYPES.map(({ type, label }) => ({ type, label: label[lang], i
     flex-wrap: wrap;
     gap: 8px;
     padding: 12px 0;
-    background: linear-gradient(var(--bg) 75%, transparent);
+    background: var(--bg);
   }
 
   .filters[hidden] {
@@ -84,11 +84,10 @@ const groups = PUB_TYPES.map(({ type, label }) => ({ type, label: label[lang], i
     padding: 6px 14px;
     font: inherit;
     font-size: 13px;
-    font-weight: 600;
-    color: var(--muted);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 999px;
+    font-weight: 700;
+    color: var(--heading);
+    background: none;
+    border: 1px solid var(--rule);
     cursor: pointer;
     transition: color 0.15s, border-color 0.15s, background 0.15s;
   }
