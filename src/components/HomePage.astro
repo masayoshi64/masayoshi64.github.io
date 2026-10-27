@@ -12,6 +12,10 @@ const t = UI[lang];
 const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
   .sort((a, b) => b.year - a.year)
   .slice(0, 3);
+// Split "company role" / "role, company" so mobile can show it on two lines.
+const affiliation = profile.affiliation[lang];
+const cut = affiliation.includes(", ") ? affiliation.indexOf(", ") + 1 : affiliation.indexOf(" ");
+const affiliationLines = cut > 0 ? [affiliation.slice(0, cut), affiliation.slice(cut + 1)] : [affiliation];
 ---
 
 <Layout lang={lang} page="home">
@@ -20,7 +24,15 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
       <img src="/profile.jpg" alt={profile.name} width="220" height="220" />
     </div>
     <div class="intro">
-      <span class="eyebrow">{profile.affiliation[lang]}</span>
+      <span class="eyebrow">
+        {affiliationLines.map((line, i) => (
+          <>
+            {i > 0 && " "}
+            {i > 0 && <br class="mobile-break" />}
+            {line}
+          </>
+        ))}
+      </span>
       <h1>{profile.name}</h1>
       <p class="subname">{profile.nameJa}</p>
     </div>
@@ -110,6 +122,10 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
     height: 100%;
     object-fit: cover;
     filter: grayscale(1) contrast(1.05);
+  }
+
+  .mobile-break {
+    display: none;
   }
 
   .eyebrow {
@@ -254,20 +270,16 @@ const recent = [...publicationsOf("conference"), ...publicationsOf("journal")]
       margin-top: 4px;
     }
 
-    /* Affiliation goes under the name, next to the photo */
-    .intro {
-      display: flex;
-      flex-direction: column;
-    }
-
+    /* Affiliation stays above the name, split into company and role */
     .eyebrow {
-      order: 1;
-      margin: 10px 0 0;
+      margin-bottom: 10px;
       font-size: 11.5px;
       letter-spacing: 0.03em;
       line-height: 1.6;
-      word-break: keep-all;
-      text-wrap: balance;
+    }
+
+    .mobile-break {
+      display: inline;
     }
 
     h1 {
