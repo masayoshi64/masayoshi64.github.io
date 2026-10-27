@@ -16,7 +16,7 @@ const links = [
 <li class="pub">
   <div class="meta">
     <span class="chip">{pub.venue}</span>
-    <span class="year">{pub.year}</span>
+    <span class:list={["year", { dup: pub.venue.includes(String(pub.year)) }]}>{pub.year}</span>
   </div>
   <div>
     <div class="title">
@@ -144,9 +144,31 @@ const links = [
       gap: 8px;
     }
 
+    .pub {
+      padding: 18px 0;
+    }
+
     .meta {
       flex-direction: row;
       align-items: center;
+    }
+
+    /* The venue chip already carries the year on small screens. */
+    .year.dup {
+      display: none;
+    }
+
+    .title {
+      font-size: 16px;
+    }
+
+    .authors,
+    .note {
+      font-size: 13.5px;
+    }
+
+    .links a {
+      padding: 5px 12px;
     }
   }
 </style>
