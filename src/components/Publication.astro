@@ -1,0 +1,154 @@
+---
+import { UI, profile, type Lang, type Publication } from "../lib/site";
+
+interface Props {
+  pub: Publication;
+  lang: Lang;
+}
+
+const { pub, lang } = Astro.props;
+const links = [
+  ...(pub.url ? [{ label: pub.url.includes("arxiv.org") ? "arXiv" : "Paper", url: pub.url }] : []),
+  ...(pub.links ?? []),
+];
+---
+
+<li class="pub">
+  <div class="meta">
+    <span class="chip">{pub.venue}</span>
+    <span class="year">{pub.year}</span>
+  </div>
+  <div>
+    <div class="title">
+      {pub.url ? <a class="prose-link" href={pub.url} target="_blank" rel="noopener">{pub.title}</a> : pub.title}
+    </div>
+    <div class="authors">
+      {
+        pub.authors.map((author, i) => (
+          <>
+            {i > 0 && ", "}
+            {author.replace(/\*$/, "") === profile.name ? <b>{author}</b> : author}
+          </>
+        ))
+      }
+    </div>
+    {pub.note && <div class="note">{pub.note}</div>}
+    {pub.award && <div class="award"><span class="chip award">🏆 {pub.award}</span></div>}
+    {pub.equal && <div class="small">{UI[lang].equal}</div>}
+    {
+      links.length > 0 && (
+        <div class="links">
+          {links.map((l) => (
+            <a href={l.url} target="_blank" rel="noopener">
+              {l.label}
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</li>
+
+<style>
+  .pub {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 16px;
+    padding: 16px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: box-shadow 0.15s, border-color 0.15s;
+  }
+
+  .pub:hover {
+    box-shadow: var(--shadow);
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .year {
+    font-size: 12px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+  }
+
+  .title {
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--heading);
+  }
+
+  .title a {
+    color: var(--accent);
+  }
+
+  .authors {
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .authors b {
+    font-weight: 700;
+    color: var(--heading);
+  }
+
+  .note {
+    margin-top: 4px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .award {
+    margin-top: 8px;
+  }
+
+  .small {
+    margin-top: 6px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .links a {
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  @media (max-width: 720px) {
+    .pub {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .meta {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+</style>

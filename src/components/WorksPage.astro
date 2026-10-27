@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Publication from "./Publication.astro";
+import { PUB_TYPES, UI, publicationsOf, type Lang } from "../lib/site";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = UI[lang];
+const groups = PUB_TYPES.map(({ type, label }) => ({ type, label: label[lang], items: publicationsOf(type) })).filter(
+  (g) => g.items.length > 0,
+);
+---
+
+<Layout lang={lang} page="works">
+  <div class="page-head">
+    <h1>{t.nav.works}</h1>
+    <p>{t.worksLead}</p>
+  </div>
+
+  <!-- Shown by the script below, so the page stays fully readable without JavaScript. -->
+  <div class="filters" role="group" hidden>
+    <button type="button" data-filter="all" aria-pressed="true">{t.all}</button>
+    {
+      groups.map((g) => (
+        <button type="button" data-filter={g.type} aria-pressed="false">
+          {g.label}
+        </button>
+      ))
+    }
+  </div>
+
+  {
+    groups.map((g) => (
+      <section data-group={g.type}>
+        <h2 class="section" id={g.type}>
+          {g.label} <span class="count">{g.items.length}</span>
+        </h2>
+        <ul class="pubs">
+          {g.items.map((pub) => (
+            <Publication pub={pub} lang={lang} />
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Layout>
+
+<script>
+  const filters = document.querySelector<HTMLElement>(".filters");
+  if (filters) {
+    const buttons = filters.querySelectorAll<HTMLButtonElement>("button");
+    const groups = document.querySelectorAll<HTMLElement>("[data-group]");
+    filters.hidden = false;
+    filters.addEventListener("click", (e) => {
+      const button = (e.target as HTMLElement).closest("button");
+      if (!button) return;
+      const filter = button.dataset.filter;
+      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+      groups.forEach((g) => (g.hidden = filter !== "all" && g.dataset.group !== filter));
+    });
+  }
+</script>
+
+<style>
+  .filters {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0;
+    background: linear-gradient(var(--bg) 75%, transparent);
+  }
+
+  .filters[hidden] {
+    display: none;
+  }
+
+  .filters button {
+    padding: 6px 14px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+
+  .filters button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .filters button[aria-pressed="true"] {
+    color: var(--bg);
+    background: var(--heading);
+    border-color: var(--heading);
+  }
+
+  @media (max-width: 720px) {
+    .filters {
+      position: static;
+    }
+  }
+</style>

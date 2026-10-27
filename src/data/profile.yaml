@@ -1,0 +1,93 @@
+# プロフィール情報 (ja / en の両方を書きます)
+# 文章中では [テキスト](URL) の形式でリンクを書けます
+
+name: Shokichi Takakura
+nameJa: 高倉 将吉
+
+affiliation:
+  ja: LINEヤフー株式会社 リサーチエンジニア
+  en: Research Engineer, LY Corporation
+
+lead:
+  ja: 機械学習の理論と応用、特に最適化とプライバシー保護技術の研究をしています。
+  en: I work on the theory and applications of machine learning, with a focus on optimization and privacy-enhancing technologies.
+
+about:
+  ja: 東京大学大学院 情報理工学系研究科 数理情報学専攻 修士課程修了。現在は LINEヤフー株式会社 でリサーチエンジニアとして、差分プライバシーや連合学習などのプライバシー保護技術、および機械学習の理論の研究に取り組んでいます。
+  en: I received my M.S. from the Department of Mathematical Informatics, Graduate School of Information Science and Technology, The University of Tokyo. I am currently a Research Engineer at LY Corporation, working on privacy-enhancing technologies such as differential privacy and federated learning, as well as the theory of machine learning.
+
+interests:
+  - Machine Learning
+  - Optimization
+  - Privacy Enhancing Technologies
+
+social:
+  - name: Google Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?hl=en&user=a5sL-8cAAAAJ
+  - name: GitHub
+    icon: github
+    url: https://github.com/masayoshi64
+
+# トップページのハイライト (上から順に表示)
+highlights:
+  - tag: ICML 2026
+    text:
+      ja: "[Inference-Aware Meta-Alignment of LLMs via Non-Linear GRPO](https://arxiv.org/abs/2602.01603) が採択されました。"
+      en: "[Inference-Aware Meta-Alignment of LLMs via Non-Linear GRPO](https://arxiv.org/abs/2602.01603) was accepted."
+  - tag: AISTATS 2026
+    text:
+      ja: 差分プライバシー下の分散推定、および連合学習 FedDuA に関する2本の論文が採択されました。
+      en: "Two papers accepted: variance estimation under differential privacy, and FedDuA for federated learning."
+  - tag: Award
+    award: true
+    text:
+      ja: DEIM2026 にて優秀論文賞を受賞しました。
+      en: Received the Outstanding Paper Award at DEIM2026.
+
+experience:
+  - period: 2024.04 –
+    current: true
+    org: { ja: LINEヤフー株式会社, en: LY Corporation }
+    role: { ja: リサーチエンジニア, en: Research Engineer }
+  - period: 2023.04 – 2024.03
+    org: { ja: 東京大学, en: The University of Tokyo }
+    role: { ja: 留学生チューター, en: Tutor for International Students }
+  - period: 2023.01 – 2024.03
+    org: { ja: 理化学研究所 革新知能統合研究センター (AIP), en: RIKEN Center for Advanced Intelligence Project (AIP) }
+    role: { ja: リサーチアシスタント, en: Research Assistant }
+  - period: 2022.08 – 2022.09
+    org: { ja: NTT 研究所, en: NTT Laboratories }
+    role: { ja: リサーチインターン, en: Research Intern }
+  - period: 2022.04 – 2023.01
+    org: { ja: フューチャー株式会社, en: Future Corporation }
+    role: { ja: 機械学習エンジニア, en: Machine Learning Engineer }
+  - period: 2022.04 – 2022.07
+    org: { ja: 東京大学, en: The University of Tokyo }
+    role: { ja: ティーチングアシスタント, en: Teaching Assistant }
+
+education:
+  - period: 2022.04 – 2024.03
+    org: { ja: 東京大学 大学院情報理工学系研究科, en: "The University of Tokyo, Graduate School of Information Science and Technology" }
+    role: { ja: 数理情報学専攻 修士課程, en: "M.S., Department of Mathematical Informatics" }
+  - period: 2020.04 – 2022.03
+    org: { ja: 東京大学 工学部, en: "The University of Tokyo, Faculty of Engineering" }
+    role: { ja: 計数工学科, en: "B.Eng., Department of Mathematical Engineering and Information Physics" }
+  - period: 2018.04 – 2020.03
+    org: { ja: 東京大学 教養学部, en: "The University of Tokyo, College of Arts and Sciences" }
+    role: { ja: 理科一類, en: Natural Sciences I }
+
+# 「その他」ページのバッジ
+badges:
+  - label: Qiita
+    url: https://qiita.com/masayoshi64
+    image: https://badgen.org/img/qiita/masayoshi64/contributions?style=flat
+  - label: AtCoder (Algorithm)
+    url: https://atcoder.jp/users/masayoshi64?contestType=algo
+    image: https://badgen.org/img/atcoder/masayoshi64/rating/algorithm?style=flat
+  - label: AtCoder (Heuristic)
+    url: https://atcoder.jp/users/masayoshi64?contestType=heuristic
+    image: https://badgen.org/img/atcoder/masayoshi64/rating/heuristic?style=flat
+  - label: Codeforces
+    url: https://codeforces.com/profile/masayoshi64
+    image: https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fcodeforces%2Fjson%2Fmasayoshi64

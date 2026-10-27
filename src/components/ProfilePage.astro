@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { UI, inlineLinks, profile, type Lang } from "../lib/site";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = UI[lang];
+const timelines = [
+  { title: t.experience, items: profile.experience },
+  { title: t.education, items: profile.education },
+];
+---
+
+<Layout lang={lang} page="profile">
+  <div class="page-head">
+    <h1>{t.nav.profile}</h1>
+  </div>
+  <p class="about prose-link" set:html={inlineLinks(profile.about[lang])} />
+
+  <h2 class="section">{t.interests}</h2>
+  <ul class="tags">
+    {profile.interests.map((i) => <li>{i}</li>)}
+  </ul>
+
+  {
+    timelines.map(({ title, items }) => (
+      <>
+        <h2 class="section">{title}</h2>
+        <ul class="timeline">
+          {items.map((item) => (
+            <li class:list={{ current: item.current }}>
+              <div class="period">{item.period}</div>
+              <div class="org">{item.org[lang]}</div>
+              <div class="role">{item.role[lang]}</div>
+            </li>
+          ))}
+        </ul>
+      </>
+    ))
+  }
+</Layout>
+
+<style>
+  .about {
+    font-size: 16.5px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 22px;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 5px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .timeline li {
+    position: relative;
+    padding-bottom: 22px;
+  }
+
+  .timeline li:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -22px;
+    width: 12px;
+    height: 12px;
+    background: var(--surface);
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+  }
+
+  .timeline li.current::before {
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+
+  .period {
+    font-size: 13px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+  }
+
+  .org {
+    font-weight: 600;
+    color: var(--heading);
+  }
+
+  .role {
+    font-size: 14px;
+    color: var(--muted);
+  }
+</style>
