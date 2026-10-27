@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { UI, profile, type Lang } from "../lib/site";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = UI[lang];
+---
+
+<Layout lang={lang} page="others">
+  <div class="page-head">
+    <h1>{t.nav.others}</h1>
+  </div>
+
+  <h2 class="section">{t.activities}</h2>
+  <ul class="badges">
+    {
+      profile.badges.map((b) => (
+        <li>
+          <a href={b.url} target="_blank" rel="noopener">
+            <span>{b.label}</span>
+            <img src={b.image} alt={b.label} loading="lazy" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
+
+<style>
+  .badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .badges a {
+    display: grid;
+    gap: 8px;
+    justify-items: start;
+    height: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--rule);
+    transition: border-color 0.15s;
+  }
+
+  .badges a:hover {
+    border-color: var(--accent);
+  }
+
+  .badges span {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+</style>
