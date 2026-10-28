@@ -5,7 +5,7 @@ name: Shokichi Takakura
 nameJa: 高倉 将吉
 
 affiliation:
-  ja: LINEヤフー株式会社 チーフリサーチエンジニア
+  ja: LINEヤフー株式会社 主任リサーチエンジニア
   en: Chief Research Engineer, LY Corporation
 
 lead:
@@ -13,7 +13,7 @@ lead:
   en: I work on the theory and applications of machine learning, with a focus on optimization and privacy-enhancing technologies.
 
 about:
-  ja: 東京大学大学院 情報理工学系研究科 数理情報学専攻 修士課程修了。現在は LINEヤフー株式会社 でチーフリサーチエンジニアとして、差分プライバシーや連合学習などのプライバシー保護技術、および機械学習の理論の研究に取り組んでいます。
+  ja: 東京大学大学院 情報理工学系研究科 数理情報学専攻 修士課程修了。現在は LINEヤフー株式会社 で主任リサーチエンジニアとして、差分プライバシーや連合学習などのプライバシー保護技術、および機械学習の理論の研究に取り組んでいます。
   en: I received my M.S. from the Department of Mathematical Informatics, Graduate School of Information Science and Technology, The University of Tokyo. I am currently a Chief Research Engineer at LY Corporation, working on privacy-enhancing technologies such as differential privacy and federated learning, as well as the theory of machine learning.
 
 interests:
@@ -52,7 +52,7 @@ experience:
   - period: 2025.04 –
     current: true
     org: { ja: LINEヤフー株式会社, en: LY Corporation }
-    role: { ja: チーフリサーチエンジニア, en: Chief Research Engineer }
+    role: { ja: 主任リサーチエンジニア, en: Chief Research Engineer }
   - period: 2024.04 – 2025.03
     org: { ja: LINEヤフー株式会社, en: LY Corporation }
     role: { ja: リサーチエンジニア, en: Research Engineer }

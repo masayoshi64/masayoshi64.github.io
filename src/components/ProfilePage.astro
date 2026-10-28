@@ -32,7 +32,7 @@ const timelines = [
         <ul class="timeline">
           {items.map((item) => (
             <li class:list={{ current: item.current }}>
-              <div class="period">{item.period}</div>
+              <div class="period">{item.period.replace(/–\s*$/, `– ${t.present}`)}</div>
               <div class="org">{item.org[lang]}</div>
               <div class="role">{item.role[lang]}</div>
             </li>
