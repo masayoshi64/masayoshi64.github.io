@@ -28,6 +28,9 @@ social:
   - name: GitHub
     icon: github
     url: https://github.com/masayoshi64
+  - name: X (Twitter)
+    icon: x
+    url: https://x.com/masayoshi361
 
 # トップページのハイライト (上から順に表示)
 highlights:
