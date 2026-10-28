@@ -49,10 +49,13 @@ highlights:
       en: Received the Outstanding Paper Award at DEIM2026.
 
 experience:
-  - period: 2024.04 –
+  - period: 2025.04 –
     current: true
     org: { ja: LINEヤフー株式会社, en: LY Corporation }
     role: { ja: チーフリサーチエンジニア, en: Chief Research Engineer }
+  - period: 2024.04 – 2025.03
+    org: { ja: LINEヤフー株式会社, en: LY Corporation }
+    role: { ja: リサーチエンジニア, en: Research Engineer }
   - period: 2023.04 – 2024.03
     org: { ja: 東京大学, en: The University of Tokyo }
     role: { ja: 留学生チューター, en: Tutor for International Students }
