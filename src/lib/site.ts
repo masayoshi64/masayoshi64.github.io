@@ -38,7 +38,7 @@ export interface Profile {
   lead: Localized;
   about: Localized;
   interests: string[];
-  social: { name: string; icon: "scholar" | "github"; url: string }[];
+  social: { name: string; icon: "scholar" | "github" | "x"; url: string }[];
   highlights: { tag: string; award?: boolean; text: Localized }[];
   experience: TimelineItem[];
   education: TimelineItem[];
