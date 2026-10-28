@@ -64,8 +64,8 @@ export function publicationsOf(type: PubType): Publication[] {
 
 export const UI = {
   ja: {
-    nav: { home: "ホーム", works: "研究", profile: "プロフィール", others: "その他" },
-    title: { home: "", works: "研究", profile: "プロフィール", others: "その他" },
+    nav: { home: "ホーム", works: "業績", profile: "プロフィール", others: "その他" },
+    title: { home: "", works: "業績", profile: "プロフィール", others: "その他" },
     description: "高倉 将吉 (Shokichi Takakura) — LINEヤフー株式会社 リサーチエンジニア。機械学習・最適化・プライバシー保護技術の研究。",
     highlights: "Highlights",
     recent: "最近の論文",
@@ -80,8 +80,8 @@ export const UI = {
     toggleTheme: "テーマを切り替え",
   },
   en: {
-    nav: { home: "Home", works: "Research", profile: "Profile", others: "Others" },
-    title: { home: "", works: "Research", profile: "Profile", others: "Others" },
+    nav: { home: "Home", works: "Publications", profile: "Profile", others: "Others" },
+    title: { home: "", works: "Publications", profile: "Profile", others: "Others" },
     description: "Shokichi Takakura — Research Engineer at LY Corporation, working on machine learning, optimization, and privacy-enhancing technologies.",
     highlights: "Highlights",
     recent: "Recent Papers",

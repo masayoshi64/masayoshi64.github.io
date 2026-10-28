@@ -1,4 +1,5 @@
 ---
+import Icon from "./Icon.astro";
 import { UI, profile, type Lang, type Publication } from "../lib/site";
 
 interface Props {
@@ -33,7 +34,7 @@ const links = [
       }
     </div>
     {pub.note && <div class="note">{pub.note}</div>}
-    {pub.award && <div class="award"><span class="chip award">★ {pub.award}</span></div>}
+    {pub.award && <div class="award"><span class="chip award"><Icon name="trophy" />{pub.award}</span></div>}
     {pub.equal && <div class="small">{UI[lang].equal}</div>}
     {
       links.length > 0 && (

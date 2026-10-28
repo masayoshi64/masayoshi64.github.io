@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Icon from "./Icon.astro";
 import Publication from "./Publication.astro";
 import { UI, inlineLinks, pagePath, profile, publicationsOf, type Lang } from "../lib/site";
 
@@ -71,7 +72,7 @@ const affiliationLines = cut > 0 ? [affiliation.slice(0, cut), affiliation.slice
       profile.highlights.map((h) => (
         <li class="card">
           <span class:list={["chip", { award: h.award }]}>
-            {h.award && "★ "}
+            <Icon name={h.award ? "trophy" : "paper"} />
             {h.tag}
           </span>
           <p class="prose-link" set:html={inlineLinks(h.text[lang])} />

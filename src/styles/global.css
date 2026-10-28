@@ -117,7 +117,9 @@ a.prose-link:hover {
    ========================================================================== */
 
 .chip {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--mono);
   font-size: 12.5px;
   font-weight: 500;
