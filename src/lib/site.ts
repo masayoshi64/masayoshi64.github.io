@@ -66,7 +66,7 @@ export const UI = {
   ja: {
     nav: { home: "ホーム", works: "業績", profile: "プロフィール", others: "その他" },
     title: { home: "", works: "業績", profile: "プロフィール", others: "その他" },
-    description: "高倉 将吉 (Shokichi Takakura) — LINEヤフー株式会社 リサーチエンジニア。機械学習・最適化・プライバシー保護技術の研究。",
+    description: "高倉 将吉 (Shokichi Takakura) — LINEヤフー株式会社 チーフリサーチエンジニア。機械学習・最適化・プライバシー保護技術の研究。",
     highlights: "Highlights",
     recent: "最近の論文",
     seeAll: "すべて見る →",
@@ -82,7 +82,7 @@ export const UI = {
   en: {
     nav: { home: "Home", works: "Publications", profile: "Profile", others: "Others" },
     title: { home: "", works: "Publications", profile: "Profile", others: "Others" },
-    description: "Shokichi Takakura — Research Engineer at LY Corporation, working on machine learning, optimization, and privacy-enhancing technologies.",
+    description: "Shokichi Takakura — Chief Research Engineer at LY Corporation, working on machine learning, optimization, and privacy-enhancing technologies.",
     highlights: "Highlights",
     recent: "Recent Papers",
     seeAll: "See all →",
