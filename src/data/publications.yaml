@@ -16,6 +16,13 @@
 - type: preprint
   year: 2026
   venue: arXiv
+  title: "Steepest Guidance: A Practical and Principled Approach to Inference-Time Alignment of Flow and Diffusion-based Models"
+  authors: [Shokichi Takakura, Akifumi Wachi, Rei Higuchi, Kohei Miyaguchi, Taiji Suzuki]
+  url: https://arxiv.org/abs/2609.39091
+
+- type: preprint
+  year: 2026
+  venue: arXiv
   title: "Escaping Iterative Parameter-Space Noise: Differentially Private Learning with a Hypernetwork"
   authors: [Naoki Nishikawa, Shokichi Takakura, Satoshi Hasegawa]
   url: https://arxiv.org/abs/2606.26772
@@ -114,6 +121,13 @@
       url: https://speakerdeck.com/lycorptech_jp/20260706a
 
 # --- Presentations ---
+- type: presentation
+  year: 2026
+  venue: IBIS 2026
+  title: 非線形GRPO を用いた、推論を考慮した LLM のメタアラインメント
+  authors: [Shokichi Takakura, Akifumi Wachi, Rei Higuchi, Kohei Miyaguchi, Taiji Suzuki]
+  note: The 29th Information-Based Induction Science Workshop, Saitama, Japan, Oct. 2026
+
 - type: presentation
   year: 2026
   venue: DEIM 2026
