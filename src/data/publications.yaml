@@ -16,6 +16,13 @@
 - type: preprint
   year: 2026
   venue: arXiv
+  title: "Instance-Optimal Moment Estimation in the Add-Remove Model of Differential Privacy"
+  authors: [Shokichi Takakura]
+  url: https://arxiv.org/abs/2611.25425
+
+- type: preprint
+  year: 2026
+  venue: arXiv
   title: "Steepest Guidance: A Practical and Principled Approach to Inference-Time Alignment of Flow and Diffusion-based Models"
   authors: [Shokichi Takakura, Akifumi Wachi, Rei Higuchi, Kohei Miyaguchi, Taiji Suzuki]
   url: https://arxiv.org/abs/2609.39091
