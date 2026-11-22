@@ -37,18 +37,19 @@
 - type: preprint
   year: 2026
   venue: arXiv
-  title: "How Neural Reward Models Learn Features for Policy Optimization: A Single-Index Analysis"
-  authors: [Rei Higuchi, Ryotaro Kawata, Akifumi Wachi, Shokichi Takakura, Kohei Miyaguchi, Taiji Suzuki]
-  url: https://arxiv.org/abs/2605.24749
-
-- type: preprint
-  year: 2026
-  venue: arXiv
   title: "A Relative-Budget Theory for Reinforcement Learning with Verifiable Rewards in Large Language Model Reasoning"
   authors: [Akifumi Wachi, Hirota Kinoshita, Shokichi Takakura, Rei Higuchi, Taiji Suzuki]
   url: https://arxiv.org/abs/2602.01523
 
 # --- International Conference papers (Refereed) ---
+- type: conference
+  year: 2026
+  venue: NeurIPS 2026
+  title: "How Neural Reward Models Learn Features for Policy Optimization: A Single-Index Analysis"
+  authors: [Rei Higuchi, Ryotaro Kawata, Akifumi Wachi, Shokichi Takakura, Kohei Miyaguchi, Taiji Suzuki]
+  url: https://arxiv.org/abs/2605.24749
+  note: Advances in Neural Information Processing Systems 39 (NeurIPS 2026)
+
 - type: conference
   year: 2026
   venue: ICML 2026
